@@ -1,7 +1,8 @@
 #
 # Move all host side NICs matching the NICGLOB pattern OR unconnected ones into the container given as $1
-# Example: move-nics.sh centos ens*
+# Example: move-nics.sh centos # Default, same as the one below
 # Example: move-nics.sh centos claim-unconnected
+# Example: move-nics.sh centos ens*
 #
 
 set -x

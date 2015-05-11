@@ -14,6 +14,7 @@ DSTPID=$(docker-pid $DSTCT)
 for NIC in $(cd /sys/class/net/ ; ls -d1 $NICGLOB)
 do
   NN=${NIC}p${DSTPID}
+  echo "Mapping '$NIC' to '$NN'"
   ip link add $NN link $NIC type macvlan mode passthru
   ip link set netns ${DSTPID} $NN
 done

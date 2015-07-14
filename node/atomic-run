@@ -1,0 +1,2 @@
+mount -o bind /host/dev /dev
+mount -o bind /host/lib/modules /lib/modules
